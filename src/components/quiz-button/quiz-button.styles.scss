@@ -1,15 +1,16 @@
 .quiz-button {
+    border-radius: 20px;
     min-width: 165px;
     width: auto;
     height: 50px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    font-family: 'ZCOOL KuaiLe', cursive;
     line-height: 50px;
     padding: 0 35px 0 35px;
     font-size: 15px;
-    background-color: black;
+    background-color: #181A18;
     color: white;
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
     font-weight: bolder;
     border: none;
     cursor: pointer;
@@ -17,7 +18,7 @@
     margin: 25px 0;
     &:hover {
         background-color: white;
-        color: black;
+        color: #181A18;
         border: 1px solid black;
     }
 }

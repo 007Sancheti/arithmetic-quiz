@@ -6,4 +6,10 @@
         margin: 20px 0px;
         width: 200px;
     }
+    &.correct {
+        border: 2px solid green;
+    }
+    &.incorrect {
+        border: 2px solid red;
+    }
 }
