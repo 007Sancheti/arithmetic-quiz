@@ -5,8 +5,6 @@ import QuizInput from '../quiz-input/quiz-input.component';
 import QuizButton from '../quiz-button/quiz-button.component';
 import './quiz.styles.scss';
 
-const userAnswers = [];
-
 class Quiz extends React.Component {
     constructor(props) {
         super(props);
@@ -23,6 +21,7 @@ class Quiz extends React.Component {
             operator,
             maxOperandValue
         );
+        this.userAnswers = []
     }
 
     handleNext = (correctAnswer) => {
@@ -38,7 +37,7 @@ class Quiz extends React.Component {
             } else {
                 this.setState({ showScore: true });
             }
-            userAnswers.push(this.state.userAnswer);
+            this.userAnswers.push(this.state.userAnswer);
             this.setState({ userAnswer: '' });
         }
     };
@@ -46,7 +45,6 @@ class Quiz extends React.Component {
     render() {
         const { score, showScore, currentQuestion, userAnswer } = this.state;
         return (
-            <div className='quiz-container'>
                 <div className='quiz-box'>
                     {showScore ? (
                         <div className='score-section'>
@@ -57,7 +55,7 @@ class Quiz extends React.Component {
                                         key={index}
                                         {...question}
                                         index={index}
-                                        userAnswers={userAnswers}
+                                        userAnswers={this.userAnswers}
                                         score={score}
                                     />
                                 ))}
@@ -108,7 +106,6 @@ class Quiz extends React.Component {
                         </>
                     )}
                 </div>
-            </div>
         );
     }
 }
