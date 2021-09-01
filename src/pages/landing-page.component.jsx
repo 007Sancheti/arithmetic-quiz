@@ -5,7 +5,9 @@ import './landing-page.styles.scss'
 const LandingPage = ({quizCount}) => {
     return (
         <div className="landing-page">
-            {Array.from(Array(quizCount)).map((quiz, index) => <Start key={index} quizName={`quiz-${index}`} /> )}
+            {
+                [...Array(quizCount)].map((quiz, index) => <Start key={index} quizName={`quiz-${index}`} /> )
+            }
         </div>
     )
 }
