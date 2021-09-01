@@ -1,0 +1,27 @@
+.start-quiz-container {
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);    
+    width: 100%;
+    font-family: 'Verdana', cursive, sans-serif;
+    color: #fff;
+    background-color: #7cc6fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    input[type=radio] {
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.start-quiz {
+    background-color: #252d4a;
+    text-align: center;
+    width: 550px;
+    min-height: 200px;
+    height: min-content;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+}
